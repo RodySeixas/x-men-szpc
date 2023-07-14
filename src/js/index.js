@@ -63,9 +63,10 @@ function alterarImagemPersonagemSelecionado(personagem) {
     const idPersonagem = personagem.attributes.id.value;
     imagemPersonagemGrande.src = `./src/imagens/card-${idPersonagem}.png`;
 }
-
+     // passo 3 - verificar se já exista um personagem selecionado, se sim, devemos remover a seleção dele 
 function removerSelecaoDoPersonagem() {
     const personagemSelecionado = document.querySelector('.selecionado');
-    alterarImagemPersonagemSelecionado(personagemSelecionado);
+    personagemSelecionado.classList.remove('selecionado');
+    // alterarImagemPersonagemSelecionado(personagemSelecionado);
 }
 
